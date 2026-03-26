@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace SimpleCalculator
 {
     public partial class Form1 : Form
@@ -24,47 +26,38 @@ namespace SimpleCalculator
                 return;
             }
 
-            firstNumber = int.Parse(txtInput.Text);
-            op = "+";
-            txtInput.Text += " + ";
+            txtInput.Text += "+";
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            if (txtInput.Text == "") return;
+            if (string.IsNullOrWhiteSpace(txtInput.Text)) return;
 
-            string expression = txtInput.Text;
-
-            
-            expression = expression.Replace("×", "*");
-            expression = expression.Replace("÷", "/");
-
-            int index = expression.IndexOf(op);
-
-            int n1 = int.Parse(expression.Substring(0, index));
-            int n2 = int.Parse(expression.Substring(index + 1));
-
-            int result = 0;
-
-            if (op == "+")
-                result = n1 + n2;
-            else if (op == "-")
-                result = n1 - n2;
-            else if (op == "*")
-                result = n1 * n2;
-            else if (op == "/")
+            try
             {
-                if (n2 == 0)
-                {
-                    MessageBox.Show("0으로 나눌 수 없습니다");
-                    return;
-                }
-                result = n1 / n2;
-            }
+                string expression = txtInput.Text;
 
-          
-            txtInput.Text = txtInput.Text + "=" + result.ToString();
-            txtResult.Text = result.ToString();
+                
+                expression = expression.Replace("×", "*");
+                expression = expression.Replace("÷", "/");
+
+              
+                expression = System.Text.RegularExpressions.Regex.Replace(
+                    expression, @"(\d+)\((.+?)\)", "($1*($2))"
+                );
+
+                
+                DataTable table = new DataTable();
+                var result = table.Compute("1 * " + expression, "");
+
+                
+                txtResult.Text = result.ToString();
+
+            }
+            catch
+            {
+                MessageBox.Show("수식을 확인해주세요.");
+            }
         }
 
         private void btnSub_Click(object sender, EventArgs e)
@@ -75,9 +68,7 @@ namespace SimpleCalculator
                 return;
             }
 
-            firstNumber = int.Parse(txtInput.Text);
-            op = "-";
-            txtInput.Text += " - ";
+            txtInput.Text += "-";
         }
 
         private void btnMul_Click(object sender, EventArgs e)
@@ -88,9 +79,7 @@ namespace SimpleCalculator
                 return;
             }
 
-            firstNumber = int.Parse(txtInput.Text);
-            op = "*"; 
-            txtInput.Text += "×"; 
+            txtInput.Text += "×";
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
@@ -101,8 +90,6 @@ namespace SimpleCalculator
                 return;
             }
 
-            firstNumber = int.Parse(txtInput.Text);
-            op = "/";
             txtInput.Text += "÷";
         }
 
@@ -119,21 +106,21 @@ namespace SimpleCalculator
         {
             if (string.IsNullOrEmpty(txtInput.Text)) return;
 
-           
+
             string currentText = txtInput.Text;
 
-            
+
             int lastOpIndex = currentText.LastIndexOfAny(new char[] { '+', '-', '*', '/', '×', '÷' });
 
             if (lastOpIndex != -1)
             {
-                
+
                 txtInput.Text = currentText.Substring(0, lastOpIndex + 1);
 
             }
             else
             {
-               
+
                 txtInput.Text = "";
             }
         }
@@ -146,6 +133,14 @@ namespace SimpleCalculator
             }
         }
 
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            txtInput.Text += "(";
+        }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            txtInput.Text += ")";
+        }
     }
 }

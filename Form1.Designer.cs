@@ -51,6 +51,8 @@
             btn2 = new Button();
             btn3 = new Button();
             btnAdd = new Button();
+            btnClose = new Button();
+            btnOpen = new Button();
             SuspendLayout();
             // 
             // calculator
@@ -86,9 +88,9 @@
             // btnDiv
             // 
             btnDiv.Font = new Font("맑은 고딕", 18F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btnDiv.Location = new Point(617, 415);
+            btnDiv.Location = new Point(527, 415);
             btnDiv.Name = "btnDiv";
-            btnDiv.Size = new Size(162, 71);
+            btnDiv.Size = new Size(132, 71);
             btnDiv.TabIndex = 6;
             btnDiv.Text = "÷";
             btnDiv.UseVisualStyleBackColor = true;
@@ -99,7 +101,7 @@
             btnCE.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
             btnCE.Location = new Point(113, 415);
             btnCE.Name = "btnCE";
-            btnCE.Size = new Size(162, 71);
+            btnCE.Size = new Size(132, 71);
             btnCE.TabIndex = 7;
             btnCE.Text = "CE";
             btnCE.UseVisualStyleBackColor = true;
@@ -108,9 +110,9 @@
             // btnC
             // 
             btnC.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btnC.Location = new Point(281, 415);
+            btnC.Location = new Point(251, 415);
             btnC.Name = "btnC";
-            btnC.Size = new Size(162, 71);
+            btnC.Size = new Size(132, 71);
             btnC.TabIndex = 8;
             btnC.Text = "C";
             btnC.UseVisualStyleBackColor = true;
@@ -119,9 +121,9 @@
             // btnD
             // 
             btnD.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btnD.Location = new Point(449, 415);
+            btnD.Location = new Point(389, 415);
             btnD.Name = "btnD";
-            btnD.Size = new Size(162, 71);
+            btnD.Size = new Size(132, 71);
             btnD.TabIndex = 9;
             btnD.Text = "del";
             btnD.UseVisualStyleBackColor = true;
@@ -130,9 +132,9 @@
             // btn9
             // 
             btn9.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btn9.Location = new Point(449, 492);
+            btn9.Location = new Point(389, 492);
             btn9.Name = "btn9";
-            btn9.Size = new Size(162, 71);
+            btn9.Size = new Size(132, 71);
             btn9.TabIndex = 13;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
@@ -141,9 +143,9 @@
             // btn8
             // 
             btn8.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btn8.Location = new Point(281, 492);
+            btn8.Location = new Point(251, 492);
             btn8.Name = "btn8";
-            btn8.Size = new Size(162, 71);
+            btn8.Size = new Size(132, 71);
             btn8.TabIndex = 12;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
@@ -154,7 +156,7 @@
             btn7.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
             btn7.Location = new Point(113, 492);
             btn7.Name = "btn7";
-            btn7.Size = new Size(162, 71);
+            btn7.Size = new Size(132, 71);
             btn7.TabIndex = 11;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
@@ -163,9 +165,9 @@
             // btnMul
             // 
             btnMul.Font = new Font("맑은 고딕", 16.125F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btnMul.Location = new Point(617, 492);
+            btnMul.Location = new Point(527, 492);
             btnMul.Name = "btnMul";
-            btnMul.Size = new Size(162, 71);
+            btnMul.Size = new Size(132, 71);
             btnMul.TabIndex = 10;
             btnMul.Text = "x";
             btnMul.UseVisualStyleBackColor = true;
@@ -174,9 +176,9 @@
             // btn6
             // 
             btn6.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btn6.Location = new Point(449, 569);
+            btn6.Location = new Point(389, 569);
             btn6.Name = "btn6";
-            btn6.Size = new Size(162, 71);
+            btn6.Size = new Size(132, 71);
             btn6.TabIndex = 17;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
@@ -185,9 +187,9 @@
             // btn5
             // 
             btn5.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btn5.Location = new Point(281, 569);
+            btn5.Location = new Point(251, 569);
             btn5.Name = "btn5";
-            btn5.Size = new Size(162, 71);
+            btn5.Size = new Size(132, 71);
             btn5.TabIndex = 16;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
@@ -198,7 +200,7 @@
             btn4.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
             btn4.Location = new Point(113, 569);
             btn4.Name = "btn4";
-            btn4.Size = new Size(162, 71);
+            btn4.Size = new Size(132, 71);
             btn4.TabIndex = 15;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
@@ -207,9 +209,9 @@
             // btnSub
             // 
             btnSub.Font = new Font("맑은 고딕", 18F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btnSub.Location = new Point(617, 569);
+            btnSub.Location = new Point(527, 569);
             btnSub.Name = "btnSub";
-            btnSub.Size = new Size(162, 71);
+            btnSub.Size = new Size(132, 71);
             btnSub.TabIndex = 14;
             btnSub.Text = "-";
             btnSub.UseVisualStyleBackColor = true;
@@ -218,9 +220,9 @@
             // btnDot
             // 
             btnDot.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btnDot.Location = new Point(449, 723);
+            btnDot.Location = new Point(389, 723);
             btnDot.Name = "btnDot";
-            btnDot.Size = new Size(162, 71);
+            btnDot.Size = new Size(132, 71);
             btnDot.TabIndex = 25;
             btnDot.Text = ".";
             btnDot.UseVisualStyleBackColor = true;
@@ -228,9 +230,9 @@
             // btn0
             // 
             btn0.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btn0.Location = new Point(281, 723);
+            btn0.Location = new Point(251, 723);
             btn0.Name = "btn0";
-            btn0.Size = new Size(162, 71);
+            btn0.Size = new Size(132, 71);
             btn0.TabIndex = 24;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
@@ -241,7 +243,7 @@
             btnAM.Font = new Font("맑은 고딕", 18F, FontStyle.Regular, GraphicsUnit.Point, 129);
             btnAM.Location = new Point(113, 723);
             btnAM.Name = "btnAM";
-            btnAM.Size = new Size(162, 71);
+            btnAM.Size = new Size(132, 71);
             btnAM.TabIndex = 23;
             btnAM.Text = "+/-";
             btnAM.UseVisualStyleBackColor = true;
@@ -249,9 +251,9 @@
             // btnEqual
             // 
             btnEqual.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btnEqual.Location = new Point(617, 723);
+            btnEqual.Location = new Point(527, 723);
             btnEqual.Name = "btnEqual";
-            btnEqual.Size = new Size(162, 71);
+            btnEqual.Size = new Size(132, 71);
             btnEqual.TabIndex = 22;
             btnEqual.Text = "=";
             btnEqual.UseVisualStyleBackColor = true;
@@ -262,7 +264,7 @@
             btn1.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
             btn1.Location = new Point(113, 646);
             btn1.Name = "btn1";
-            btn1.Size = new Size(162, 71);
+            btn1.Size = new Size(132, 71);
             btn1.TabIndex = 21;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
@@ -271,9 +273,9 @@
             // btn2
             // 
             btn2.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btn2.Location = new Point(281, 646);
+            btn2.Location = new Point(251, 646);
             btn2.Name = "btn2";
-            btn2.Size = new Size(162, 71);
+            btn2.Size = new Size(132, 71);
             btn2.TabIndex = 20;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
@@ -282,9 +284,9 @@
             // btn3
             // 
             btn3.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btn3.Location = new Point(449, 646);
+            btn3.Location = new Point(389, 646);
             btn3.Name = "btn3";
-            btn3.Size = new Size(162, 71);
+            btn3.Size = new Size(132, 71);
             btn3.TabIndex = 19;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
@@ -293,19 +295,43 @@
             // btnAdd
             // 
             btnAdd.Font = new Font("맑은 고딕", 18F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btnAdd.Location = new Point(617, 646);
+            btnAdd.Location = new Point(527, 646);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(162, 71);
+            btnAdd.Size = new Size(132, 71);
             btnAdd.TabIndex = 18;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += btnAdd_Click;
+            // 
+            // btnClose
+            // 
+            btnClose.Font = new Font("맑은 고딕", 16.125F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            btnClose.Location = new Point(665, 492);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(132, 71);
+            btnClose.TabIndex = 27;
+            btnClose.Text = ")";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
+            // 
+            // btnOpen
+            // 
+            btnOpen.Font = new Font("맑은 고딕", 16.125F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            btnOpen.Location = new Point(665, 415);
+            btnOpen.Name = "btnOpen";
+            btnOpen.Size = new Size(132, 71);
+            btnOpen.TabIndex = 26;
+            btnOpen.Text = "(";
+            btnOpen.UseVisualStyleBackColor = true;
+            btnOpen.Click += btnOpen_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(930, 893);
+            Controls.Add(btnClose);
+            Controls.Add(btnOpen);
             Controls.Add(btnDot);
             Controls.Add(btn0);
             Controls.Add(btnAM);
@@ -360,5 +386,7 @@
         private Button btn2;
         private Button btn3;
         private Button btnAdd;
+        private Button btnClose;
+        private Button btnOpen;
     }
 }
