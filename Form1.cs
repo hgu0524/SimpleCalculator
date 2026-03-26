@@ -76,5 +76,27 @@ namespace SimpleCalculator
             op = "/";
             txtInput.Clear();
         }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            txtInput.Clear();
+            txtResult.Clear();
+
+            firstNumber = 0;
+            op = "";
+        }
+
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+            txtInput.Clear();
+        }
+
+        private void btnD_Click(object sender, EventArgs e)
+        {
+            if (txtInput.Text.Length > 0)
+            {
+                txtInput.Text = txtInput.Text.Substring(0, txtInput.Text.Length - 1);
+            }
+        }
     }
 }

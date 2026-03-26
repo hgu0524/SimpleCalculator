@@ -103,6 +103,7 @@
             btnCE.TabIndex = 7;
             btnCE.Text = "CE";
             btnCE.UseVisualStyleBackColor = true;
+            btnCE.Click += btnCE_Click;
             // 
             // btnC
             // 
@@ -113,6 +114,7 @@
             btnC.TabIndex = 8;
             btnC.Text = "C";
             btnC.UseVisualStyleBackColor = true;
+            btnC.Click += btnC_Click;
             // 
             // btnD
             // 
@@ -123,6 +125,7 @@
             btnD.TabIndex = 9;
             btnD.Text = "del";
             btnD.UseVisualStyleBackColor = true;
+            btnD.Click += btnD_Click;
             // 
             // btn9
             // 
@@ -257,7 +260,7 @@
             // btn1
             // 
             btn1.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btn1.Location = new Point(449, 646);
+            btn1.Location = new Point(113, 646);
             btn1.Name = "btn1";
             btn1.Size = new Size(162, 71);
             btn1.TabIndex = 21;
@@ -279,7 +282,7 @@
             // btn3
             // 
             btn3.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            btn3.Location = new Point(113, 646);
+            btn3.Location = new Point(449, 646);
             btn3.Name = "btn3";
             btn3.Size = new Size(162, 71);
             btn3.TabIndex = 19;
