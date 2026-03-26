@@ -18,7 +18,11 @@ namespace SimpleCalculator
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtInput.Text == "") return;
+            if (txtInput.Text == "")
+            {
+                MessageBox.Show("숫자를 입력하세요");
+                return;
+            }
 
             firstNumber = int.Parse(txtInput.Text);
             op = "+";
@@ -27,7 +31,11 @@ namespace SimpleCalculator
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            if (txtInput.Text == "") return;
+            if (txtInput.Text == "")
+            {
+                MessageBox.Show("숫자를 입력하세요");
+                return;
+            }
 
             int secondNumber = int.Parse(txtInput.Text);
             int result = 0;
@@ -47,12 +55,19 @@ namespace SimpleCalculator
             else if (op == "/")
                 result = firstNumber / secondNumber;
 
+
+
             txtResult.Text = result.ToString();
+            txtInput.Text = result.ToString();
         }
 
         private void btnSub_Click(object sender, EventArgs e)
         {
-            if (txtInput.Text == "") return;
+            if (txtInput.Text == "")
+            {
+                MessageBox.Show("숫자를 입력하세요");
+                return;
+            }
 
             firstNumber = int.Parse(txtInput.Text);
             op = "-";
@@ -61,7 +76,11 @@ namespace SimpleCalculator
 
         private void btnMul_Click(object sender, EventArgs e)
         {
-            if (txtInput.Text == "") return;
+            if (txtInput.Text == "")
+            {
+                MessageBox.Show("숫자를 입력하세요");
+                return;
+            }
 
             firstNumber = int.Parse(txtInput.Text);
             op = "*";
@@ -70,7 +89,11 @@ namespace SimpleCalculator
 
         private void btnDiv_Click(object sender, EventArgs e)
         {
-            if (txtInput.Text == "") return;
+            if (txtInput.Text == "")
+            {
+                MessageBox.Show("숫자를 입력하세요");
+                return;
+            }
 
             firstNumber = int.Parse(txtInput.Text);
             op = "/";
@@ -98,5 +121,7 @@ namespace SimpleCalculator
                 txtInput.Text = txtInput.Text.Substring(0, txtInput.Text.Length - 1);
             }
         }
+
+
     }
 }
