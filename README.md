@@ -69,8 +69,6 @@
 ## 실행 화면 (과제4)
 
 ![과제4 실행화면](img/screenshot-12.png)
-![과제4 실행화면](img/screenshot-13.png)
-![과제4 실행화면](img/screenshot-14.png)
 !
 
 * 과제 내용
