@@ -31,10 +31,10 @@
 
 ## 실행 화면 (과제2)
 
-![과제2 실행화면](img/screenshot-2-1.png)
-![과제2 실행화면](img/screenshot-2-2.png)
-![과제2 실행화면](img/screenshot-2-3.png)
-![과제2 실행화면](img/screenshot-2-4.png)
+![과제2 실행화면](img/screenshot-2.png)
+![과제2 실행화면](img/screenshot-3.png)
+![과제2 실행화면](img/screenshot-4.png)
+![과제2 실행화면](img/screenshot-5.png)
 
 * 과제 내용
   사칙연산 기능 확장
@@ -49,8 +49,12 @@
 
 ## 실행 화면 (과제3)
 
-![과제3 실행화면](img/screenshot-3.png)
-
+![과제3 실행화면](img/screenshot-6.png)
+![과제3 실행화면](img/screenshot-7.png)
+![과제3 실행화면](img/screenshot-8.png)
+![과제3 실행화면](img/screenshot-9.png)
+![과제3 실행화면](img/screenshot-10.png)
+![과제3 실행화면](img/screenshot-11.png)
 * 과제 내용
   계산기 보조 기능 구현
 
@@ -64,7 +68,10 @@
 
 ## 실행 화면 (과제4)
 
-![과제4 실행화면](img/screenshot-4.png)
+![과제4 실행화면](img/screenshot-12.png)
+![과제4 실행화면](img/screenshot-13.png)
+![과제4 실행화면](img/screenshot-14.png)
+!
 
 * 과제 내용
   사용자 편의 기능 추가
@@ -77,7 +84,7 @@
 
 ## 실행 화면 (과제3 보완)
 
-![과제3 보완 실행화면](img/screenshot-5.png)
+![과제3 보완 실행화면](img/screenshot-15.png)
 
 * 과제 내용
   기존 계산 기능의 문제점 개선 및 UI 향상
