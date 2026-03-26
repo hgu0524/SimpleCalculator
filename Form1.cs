@@ -117,7 +117,25 @@ namespace SimpleCalculator
 
         private void btnCE_Click(object sender, EventArgs e)
         {
-            txtInput.Clear();
+            if (string.IsNullOrEmpty(txtInput.Text)) return;
+
+           
+            string currentText = txtInput.Text;
+
+            
+            int lastOpIndex = currentText.LastIndexOfAny(new char[] { '+', '-', '*', '/', '×', '÷' });
+
+            if (lastOpIndex != -1)
+            {
+                
+                txtInput.Text = currentText.Substring(0, lastOpIndex + 1);
+
+            }
+            else
+            {
+               
+                txtInput.Text = "";
+            }
         }
 
         private void btnD_Click(object sender, EventArgs e)
