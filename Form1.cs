@@ -26,39 +26,45 @@ namespace SimpleCalculator
 
             firstNumber = int.Parse(txtInput.Text);
             op = "+";
-            txtInput.Clear();
+            txtInput.Text += " + ";
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            if (txtInput.Text == "")
-            {
-                MessageBox.Show("숫자를 입력하세요");
-                return;
-            }
+            if (txtInput.Text == "") return;
 
-            int secondNumber = int.Parse(txtInput.Text);
+            string expression = txtInput.Text;
+
+            
+            expression = expression.Replace("×", "*");
+            expression = expression.Replace("÷", "/");
+
+            int index = expression.IndexOf(op);
+
+            int n1 = int.Parse(expression.Substring(0, index));
+            int n2 = int.Parse(expression.Substring(index + 1));
+
             int result = 0;
 
-            if (op == "/" && secondNumber == 0)
+            if (op == "+")
+                result = n1 + n2;
+            else if (op == "-")
+                result = n1 - n2;
+            else if (op == "*")
+                result = n1 * n2;
+            else if (op == "/")
             {
-                MessageBox.Show("0으로 나눌 수 없습니다");
-                return;
+                if (n2 == 0)
+                {
+                    MessageBox.Show("0으로 나눌 수 없습니다");
+                    return;
+                }
+                result = n1 / n2;
             }
 
-            if (op == "+")
-                result = firstNumber + secondNumber;
-            else if (op == "-")
-                result = firstNumber - secondNumber;
-            else if (op == "*")
-                result = firstNumber * secondNumber;
-            else if (op == "/")
-                result = firstNumber / secondNumber;
-
-
-
+          
+            txtInput.Text = txtInput.Text + "=" + result.ToString();
             txtResult.Text = result.ToString();
-            txtInput.Text = result.ToString();
         }
 
         private void btnSub_Click(object sender, EventArgs e)
@@ -71,7 +77,7 @@ namespace SimpleCalculator
 
             firstNumber = int.Parse(txtInput.Text);
             op = "-";
-            txtInput.Clear();
+            txtInput.Text += " - ";
         }
 
         private void btnMul_Click(object sender, EventArgs e)
@@ -83,8 +89,8 @@ namespace SimpleCalculator
             }
 
             firstNumber = int.Parse(txtInput.Text);
-            op = "*";
-            txtInput.Clear();
+            op = "*"; 
+            txtInput.Text += "×"; 
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
@@ -97,7 +103,7 @@ namespace SimpleCalculator
 
             firstNumber = int.Parse(txtInput.Text);
             op = "/";
-            txtInput.Clear();
+            txtInput.Text += "÷";
         }
 
         private void btnC_Click(object sender, EventArgs e)
