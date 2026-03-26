@@ -92,6 +92,7 @@
             btnDiv.TabIndex = 6;
             btnDiv.Text = "÷";
             btnDiv.UseVisualStyleBackColor = true;
+            btnDiv.Click += btnDiv_Click;
             // 
             // btnCE
             // 
@@ -165,6 +166,7 @@
             btnMul.TabIndex = 10;
             btnMul.Text = "x";
             btnMul.UseVisualStyleBackColor = true;
+            btnMul.Click += btnMul_Click;
             // 
             // btn6
             // 
@@ -208,6 +210,7 @@
             btnSub.TabIndex = 14;
             btnSub.Text = "-";
             btnSub.UseVisualStyleBackColor = true;
+            btnSub.Click += btnSub_Click;
             // 
             // btnDot
             // 

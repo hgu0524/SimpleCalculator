@@ -32,12 +32,49 @@ namespace SimpleCalculator
             int secondNumber = int.Parse(txtInput.Text);
             int result = 0;
 
-            if (op == "+")
+            if (op == "/" && secondNumber == 0)
             {
-                result = firstNumber + secondNumber;
+                MessageBox.Show("0으로 나눌 수 없습니다");
+                return;
             }
 
+            if (op == "+")
+                result = firstNumber + secondNumber;
+            else if (op == "-")
+                result = firstNumber - secondNumber;
+            else if (op == "*")
+                result = firstNumber * secondNumber;
+            else if (op == "/")
+                result = firstNumber / secondNumber;
+
             txtResult.Text = result.ToString();
+        }
+
+        private void btnSub_Click(object sender, EventArgs e)
+        {
+            if (txtInput.Text == "") return;
+
+            firstNumber = int.Parse(txtInput.Text);
+            op = "-";
+            txtInput.Clear();
+        }
+
+        private void btnMul_Click(object sender, EventArgs e)
+        {
+            if (txtInput.Text == "") return;
+
+            firstNumber = int.Parse(txtInput.Text);
+            op = "*";
+            txtInput.Clear();
+        }
+
+        private void btnDiv_Click(object sender, EventArgs e)
+        {
+            if (txtInput.Text == "") return;
+
+            firstNumber = int.Parse(txtInput.Text);
+            op = "/";
+            txtInput.Clear();
         }
     }
 }
